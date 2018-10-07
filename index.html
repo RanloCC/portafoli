@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio de Ranló Castellví</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no,
+  	initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    	<link rel="stylesheet" href="css/estilos2.css">
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+
+  </head>
+  <body>
+    <header>
+      <div class="contenedor">
+        <nav class="menu">
+          <a href="#a" class="anclaa">Acerca de</a>
+          <a href="#b" class="anclaa">Proyectos</a>
+          <a href="#c" class="anclaa">Contacto</a>
+        </nav>
+        <div class="contenedor-logotipo">
+          <img src="img/logo.svg" alt="Rcc">
+        </div>
+        <div class="contenedor-logotipo2">
+          <img src="img/logo2.svg" alt="Rcc">
+        </div>
+      </div>
+    </header>
+    <section class="main">
+      <section class="acerca-de" id="a">
+        <div class="contenedor">
+          <div class="foto">
+            <img src="img/ran.jpg" width="115" height="115" alt="Ranló Castellví">
+          </div>
+          <div class="texto">
+            <h3 class="titulo" >Acerca de</h3>
+            <p>Hola! Buscas diseñador ? entonces estas en el sitio indicado, me llamo Ranló, he estudiado <span class="bold">Diseño gráfico, impresión digital y Web encarado al front end.</span> A parte, me gusta dibujar y hacer cursillos de todo tipo, serigrafía, sketchUp...etc; así que soy muy fan de las plataformas como Udemy y Domestika. Si te interesa y quieres saber más, no dudes en contactar y nos tomamos un café</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="proyectos" id="b">
+        <div class="contenedor">
+          <h3 class="titulo">Proyectos</h3>
+          <div class="contenedor-proyectos">
+
+
+                <div class="proyecto">
+                    <div class="thumb">
+                      <a href="special.html"><img src="img/trabajos/special.jpg" alt="Proyecto Territori Special"></a>
+                    </div>
+                    <div class="descripcion">
+                      <p class="nombre">Territori Special</p>
+                      <p class="categoria">Logotipo</p>
+                    </div>
+                  </div>
+                <div class="proyecto">
+                  <div class="thumb">
+                    <a href="marco.html"><img src="img/trabajos/ceramiques/Barcelona.jpg" alt="Proyecto Ceramiques Marcó"></a>
+                  </div>
+                  <div class="descripcion">
+                    <p class="nombre">Ceramiques Marcó</p>
+                    <p class="categoria">Ilustración</p>
+                  </div>
+                </div>
+                <div class="proyecto">
+                    <div class="thumb">
+                      <a href="weekly.html"><img src="img/trabajos/weekly.jpg" alt="Proyecto Weekly Veggie"></a>
+                    </div>
+                    <div class="descripcion">
+                      <p class="nombre">Weekly Veggie</p>
+                      <p class="categoria">Branding/app</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="thumb">
+                      <a href="clipper.html"><img src="img/trabajos/clipper.jpg" alt="Proyecto Clipper"></a>
+                    </div>
+                    <div class="descripcion">
+                      <p class="nombre">Clipper</p>
+                      <p class="categoria">Ilustración</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <div class="thumb">
+                      <a href="monet.html"><img src="img/trabajos/monet.jpg" alt="Proyecto Monet"></a>
+                    </div>
+                    <div class="descripcion">
+                      <p class="nombre">La flor de monet</p>
+                      <p class="categoria">Branding</p>
+                    </div>
+                </div>
+                  <div class="proyecto">
+                    <div class="thumb">
+                      <a href="amazonics.html"><img src="img/trabajos/amazonicos.jpg" alt="Proyecto Amazonicos"></a>
+                    </div>
+                    <div class="descripcion">
+                      <p class="nombre">Amazonicos</p>
+                      <p class="categoria">Logotipo/packaging</p>
+                    </div>
+                  </div>
+
+
+
+            </div>
+        </div>
+      </section>
+
+    </section>
+    <footer>
+      <section class="contacto" id="c">
+        <div class="contenedor">
+          <h3 class="titulo">Contacto</h3>
+          <form class="form formulario" id="mailgun" role="form" method="POST">
+            <input type="text" placeholder="Nombre" name="name" required>
+            <input type="email" placeholder="Correo" name="email" required>
+            <textarea name="message" placeholder="Mensaje"></textarea>
+            <input class="boton" type="submit" name="" value="Enviar">
+          </form>
+
+          <script>
+          var mailgunURL;
+
+          mailgunURL = 'mailgun.php';
+
+          $('#mailgun').on('submit',function(e) {
+            e.preventDefault();
+
+            $('#mailgun *').fadeOut(200);
+            $('#mailgun').prepend('Tu mensaje está enviandose...');
+
+            $.ajax({
+              type     : 'POST',
+              cache    : false,
+              url      : mailgunURL,
+              data     : $(this).serialize(),
+              success  : function(data) {
+                responseSuccess(data);
+                console.log(data);
+              },
+              error  : function(data) {
+                console.log('Silent failure.');
+              }
+            });
+
+            return false;
+
+          });
+
+          function responseSuccess(data) {
+
+            data = JSON.parse(data);
+
+            if(data.status === 'success') {
+              $('#mailgun').html('Mensaje enviado correctamente.');
+            } else {
+              $('#mailgun').html('Error.');
+            }
+
+          }
+
+          </script>
+
+
+        </div>
+      </section>
+      <section class="redes-sociales">
+        <div class="contenedor">
+          <a href="https://twitter.com/RanloCastellvi" class="twitter" target="_BLANK"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.facebook.com/Ranlo.illustration" class="facebook" target="_BLANK"><i class="fa fa-facebook"></i></a>
+          <!-- <a href="#" class="git"  target="_BLANK"><i class="fa fa-github"></i></a> -->
+          <a href="https://www.instagram.com/digital_rcc/" class="instagram" target="_BLANK"><i class="fa fa-instagram"></i></a>
+        </div>
+
+        <div class="firma">
+          <p>Design & develop by</p>
+          <a href="index.html" class="logo-rcc"><img src="img/logo2.svg" alt="Rcc"></a>
+
+
+        </div>
+
+
+      </section>
+    </footer>
+    <script>
+    
+    $('.anclaa').click(function(e){
+		e.preventDefault();		//evitar el eventos del enlace normal
+		var strAncla=$(this).attr('href'); //id del ancla
+			$('body,html').stop(true,true).animate({
+				scrollTop: $(strAncla).offset().top
+			},500);
+
+	});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,322 @@
+*{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+body{
+  background: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+/* ----- ----- contenedor ---- ---- */
+.contenedor{
+  width: 90%;
+  max-width: 1000px;
+  margin:auto;
+  overflow: hidden;
+  /*overflow per als float que funcionin bé */
+
+}
+header .contenedor{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content:space-between;
+}
+.main .proyectos .contenedor{
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ---- ----- HEADER ---- ---- */
+
+header{
+  background: url('../img/fondo3.jpg')#fff;
+  background-repeat: no-repeat;
+  background-position: center;
+   max-height: 500px;
+}
+header .menu{
+  margin: 40px 0;
+  text-align: right;
+
+}
+header .menu a{
+  margin:0 20px;
+  color: #606060;
+  padding-bottom: 7px;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-size: 1em;
+}
+header .menu a:hover{
+  border-bottom: 1px solid #606060;
+
+}
+header .contenedor-logotipo{
+  display: flex;
+  /* per a fer servir el flexbox */
+  align-content:flex-start;
+  margin: 10px 0 250px 0;
+}
+header .contenedor-logotipo2{
+  display: none;
+}
+header .contenedor-logotipo img{
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+  /* border-radius: 3px; */
+  display: inline-block;
+  text-align: center;
+
+}
+/* ----- ----- MAIN ----- ----- */
+.main .contenedor{
+  overflow: visible;
+}
+.main .acerca-de{
+  text-align: center;
+  line-height:25px;
+}
+.main .acerca-de .foto{
+  margin-top: -60px;
+}
+.main .acerca-de .foto img{
+  vertical-align: top;
+  border-radius: 50%;
+  border: 5px solid rgba(200, 200, 240, 0.2);
+}
+.main .acerca-de .texto{
+  color:#5a5a5a;
+  font-weight:400;
+  font-size: 1em;
+  line-height: 30px;
+  width: 80%;
+  margin:40px auto;
+}
+.main .acerca-de .texto .titulo{
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #49a3d6;
+  text-align: center;
+}
+.main .acerca-de .texto .bold{
+  font-weight: 700;
+  color: #49a3d6;
+}
+/* ----- ----- main proyectos ----- ----- */
+.main .proyectos{
+  background: #f2f2f2;
+  padding: 60px 0;
+}
+.main .proyectos .titulo {
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #5a5a5a;
+  text-align: center;
+}
+.main .proyectos .contenedor-proyectos{
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
+.main .proyectos .contenedor-proyectos .proyecto{
+  width: 30%;
+  margin: 0 5px 40px 5px
+}
+.main .proyectos .contenedor-proyectos .thumb{
+  width: 100%;
+  margin-bottom:10px;
+
+}
+.main .proyectos .contenedor-proyectos .thumb img{
+  vertical-align: top;
+  width: 70%;
+  margin: 20px;
+  padding: 2px;
+  border: 1px solid lightgrey;
+  opacity: 0.7;
+
+}
+.main .proyectos .contenedor-proyectos .thumb img:hover{
+border: 1px solid #fff;
+    opacity: 1;
+    -webkit-box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+    -moz-box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+}
+.main .proyectos .contenedor-proyectos .proyecto .descripcion{
+  text-align: center;
+}
+.main .proyectos .contenedor-proyectos .proyecto .descripcion .nombre{
+  font-weight: 700;
+  color: #49a3d6;
+
+}
+.main .proyectos .contenedor-proyectos .proyecto .descripcion .categoria{
+  font-size: 10px;
+  color: ##5a5a5a;
+}
+/* ---- ---- footer --- --- */
+
+footer .contacto{
+  padding:60px 0;
+}
+footer .contacto .titulo{
+  font-size: 34px;
+  line-height: 34px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #49a3d6;
+  text-align: center;
+}
+footer .contacto .formulario{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between;
+}
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"],
+footer .contacto .formulario textarea{
+  border: 2px solid rgba(200, 200, 240, 0.2);
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 10px;
+  color: #a4a4a4;
+}
+footer .contacto .formulario input[type="text"]:focus,
+footer .contacto .formulario input[type="email"]:focus,
+footer .contacto .formulario textarea:focus{
+  border: 2px solid #49a3d6;
+}
+
+footer .contacto .formulario input[type="text"],
+footer .contacto .formulario input[type="email"]{
+  width: 49%;
+  margin-bottom: 15px;
+}
+footer .contacto .formulario textarea{
+  width: 100%;
+  height: 100px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 300px;
+  margin-bottom: 15px;
+}
+footer .contacto .formulario .boton {
+  margin: auto;
+  background: #3895ea;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 15px 40px;
+  cursor:pointer;
+
+}
+footer .contacto .formulario .boton:hover{
+  background: #387bea;
+}
+footer .redes-sociales{
+  background: #5a5a5a;
+  padding: 60px 0 0 0;
+}
+footer .redes-sociales .contenedor{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+footer .redes-sociales .firma{
+  display: flex;
+  justify-content:flex-end;
+  align-items: baseline;
+  padding-top: 60px;
+  /* align-items:flex-end; */
+}
+footer .redes-sociales .firma p{
+font-size: 10px;
+    color: #fff;
+}
+footer .redes-sociales .firma a{
+  display: flex;
+  justify-content:flex-start;
+  align-items: baseline;
+  padding: 0;
+  margin: 0 10px 0 10px;
+  width: 40px;
+  border-radius: 10%;
+  background: #fff;
+}
+footer .redes-sociales .firma a:hover{
+    margin: 100;
+    background: #ffffffbd;
+
+}
+footer .redes-sociales a{
+  color: #fff;
+  text-align: center;
+  width: 100px;
+  display: block;
+  padding: 15px 0;
+  border-radius: 10px;
+  font-size: 30px;
+  margin: 0 20px;
+}
+footer .redes-sociales img{
+  width: 40px;
+  display: block;
+  padding: 0 10px 0 10px;
+}
+footer .redes-sociales .twitter:hover{background: #1da1f2;}
+footer .redes-sociales .facebook:hover{background: #3b5998;}
+footer .redes-sociales .git:hover{background: #666666;}
+footer .redes-sociales .instagram:hover{background: #3f729b;}
+
+/* --- ---media queries --- -- */
+
+@media screen and (max-width :800px) {
+  header .menu {
+    /* width: 100%; */
+        margin: 40px 0 15px 0;
+    text-align:center;
+  }
+  header .contenedor-logotipo{
+    display: none;
+  }
+  header .contenedor-logotipo2{
+    display:initial;
+    /* width: 100%; */
+    /* flex-wrap:wrap; */
+    justify-content:space-between;
+    /* per a fer servir el flexbox */
+    /* align-content:space-around; */
+        margin: 10px 0 100px 0;
+  }
+  header .contenedor-logotipo2 img{
+      width: 80px;
+  }
+
+  .main .proyectos .contenedor-proyectos .proyecto{
+    width: 46%;
+  }
+
+}
+@media screen and (max-width :500px){
+
+  footer .redes-sociales .contenedor{
+    flex-wrap: wrap;
+
+  }
+  header .contenedor-logotipo2{
+    display: none;
+  }
+  header .menu {
+
+        margin: 40px 0 100px 0;
+  }
+}
