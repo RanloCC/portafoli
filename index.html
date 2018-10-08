@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     	<link rel="stylesheet" href="css/estilos2.css">
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127182177-1"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-127182177-1');
+      </script>
 
   </head>
   <body>
@@ -185,7 +194,7 @@
       </section>
     </footer>
     <script>
-    
+
     $('.anclaa').click(function(e){
 		e.preventDefault();		//evitar el eventos del enlace normal
 		var strAncla=$(this).attr('href'); //id del ancla
