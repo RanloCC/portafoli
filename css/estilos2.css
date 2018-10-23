@@ -384,21 +384,22 @@ body > main > div > div > div.fotorama-cont > span:nth-child(2) {
     background-position: top;
      max-height: 500px;
   }
-  header .menu {
-    /* width: 100%; */
+  /*header .menu {
+
         margin: 40px 0 15px 0;
     text-align:center;
+  }*/
+  header .menu {
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 100px;
   }
   header .contenedor-logotipo{
     display: none;
   }
-  header .contenedor-logotipo2{
+header .logo2{ 
     display:initial;
-    /* width: 100%; */
-    /* flex-wrap:wrap; */
     justify-content:space-between;
-    /* per a fer servir el flexbox */
-    /* align-content:space-around; */
         margin: 10px 0 100px 0;
   }
   header .contenedor-logotipo2 img{
